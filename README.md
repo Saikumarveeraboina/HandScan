@@ -9,5 +9,5 @@ pip install  numpy
 TO EXCECUTE THE CODE 
 python main.py
 
-THANK YOU
+THANK YOU SUBSCRIBE FOR MORE
 -------------------------------------------------------------------------------------------------
