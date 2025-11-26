@@ -1,6 +1,5 @@
 import cv2
-import mediapipe as mp
-import numpy as np
+import mediapipe as mp 
 
 # Load gambar telapak tangan 
 template = cv2.imread('hand_template.png', cv2.IMREAD_UNCHANGED)
@@ -74,9 +73,10 @@ while cap.isOpened():
                         break
                 video.release()
 
-    cv2.imshow('Hand Scanner', frame)
-    if cv2.waitKey(5) & 0xFF == 27:
+    cv2.imshow('Hand Scanner', frame) 
+    if cv2.waitKey(5) & 0xFF == 27:   
         break
 
 cap.release()
 cv2.destroyAllWindows()
+
