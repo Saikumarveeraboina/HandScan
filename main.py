@@ -5,9 +5,7 @@ import mediapipe as mp
 template = cv2.imread('hand_template.png', cv2.IMREAD_UNCHANGED)
 template_h, template_w = template.shape[:2]
 
-# Inisialisasi kamera
 cap = cv2.VideoCapture(0) 
-
 # Mediapipe untuk deteksi tangan
 mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
@@ -48,10 +46,8 @@ while cap.isOpened():
 
     if results.multi_hand_landmarks:
         for hand_landmarks in results.multi_hand_landmarks:
-            # Gambar landmark
+    
             mp_drawing.draw_landmarks(frame, hand_landmarks, mp_hands.HAND_CONNECTIONS)
-
-            # Dapatkan bounding box dari landmark
             x_coords = [lm.x for lm in hand_landmarks.landmark]
             y_coords = [lm.y for lm in hand_landmarks.landmark]
             x_min, x_max = int(min(x_coords) * w), int(max(x_coords) * w)
@@ -79,4 +75,5 @@ while cap.isOpened():
 
 cap.release()
 cv2.destroyAllWindows()
+
 
