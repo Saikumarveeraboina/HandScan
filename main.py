@@ -4,7 +4,6 @@ import mediapipe as mp
 # Load gambar telapak tangan 
 template = cv2.imread('hand_template.png', cv2.IMREAD_UNCHANGED)
 template_h, template_w = template.shape[:2]
-
 cap = cv2.VideoCapture(0) 
 # Mediapipe untuk deteksi tangan
 mp_hands = mp.solutions.hands
@@ -75,5 +74,6 @@ while cap.isOpened():
 
 cap.release()
 cv2.destroyAllWindows()
+
 
 
