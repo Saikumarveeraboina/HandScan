@@ -12,6 +12,7 @@ hands = mp_hands.Hands(static_image_mode=False,
                        max_num_hands=1,
                        min_detection_confidence=0.7)
 
+
 # Fungsi untuk overlay gambar transparan
 def overlay_image_alpha(img, img_overlay, pos):
     x, y = pos
@@ -29,6 +30,7 @@ while cap.isOpened():
     if not ret:
         break
 
+  
     # Flip horizontal for mirror effect
     frame = cv2.flip(frame, 1)
     h, w, _ = frame.shape
@@ -74,5 +76,6 @@ while cap.isOpened():
 
 cap.release()
 cv2.destroyAllWindows()
+
 
 
