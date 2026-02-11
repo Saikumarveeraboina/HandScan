@@ -13,6 +13,8 @@ hands = mp_hands.Hands(static_image_mode=False,
                        min_detection_confidence=0.7)
 # Fungsi untuk overlay gambar transparan
 def overlay_image_alpha(img, img_overlay, pos):
+
+  
     x, y = pos
     alpha_overlay = img_overlay[:, :, 3] / 255.0
     alpha_background = 1.0 - alpha_overlay
@@ -74,6 +76,7 @@ while cap.isOpened():
 
 cap.release()
 cv2.destroyAllWindows()
+
 
 
 
